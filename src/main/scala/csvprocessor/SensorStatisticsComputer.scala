@@ -53,10 +53,10 @@ object SensorStatisticsComputer extends App {
   }.toList
 
 
-  println(s"Num of files processed:  ${processFiles(new File("C:/Users/shivr/IdeaProjects/sensor-statistics/src/main/resources/"))}")
-  println(s"Num of processed measurements:  ${measurements(processSensors(new File("C:/Users/shivr/IdeaProjects/sensor-statistics/src/main/resources/")))._2}")
-  println(s"Num of failed measurements:  ${measurements(processSensors(new File("C:/Users/shivr/IdeaProjects/sensor-statistics/src/main/resources/")))._1}")
+  println(s"Num of files processed:  ${processFiles(new File("src/main/resources/"))}")
+  println(s"Num of processed measurements:  ${measurements(processSensors(new File("src/main/resources/")))._2}")
+  println(s"Num of failed measurements:  ${measurements(processSensors(new File("src/main/resources/")))._1}")
   println("Sensors with highest avg humidity:" + "\n"+ "sensorId, min, avg, max")
-  processHumidity(processSensors(new File("C:/Users/shivr/IdeaProjects/sensor-statistics/src/main/resources/"))).foreach(x=> println(s"   $x"))
+  processHumidity(processSensors(new File("src/main/resources/"))).foreach(x=> println(s"   $x"))
 
 }
